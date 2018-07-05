@@ -1,8 +1,8 @@
 TOTAL HACK JOB - use at your own risk
 
-As it currently stands, the Imagemagick programs provided with Ubuntu, even 18.04, don't compile / link against any library that handles JPEG2000.  Years ago, it used to use Jasper, years back, but Jasper's well in the past (no longer in the Deb/Ubuntu tree).
+As it currently stands, the Imagemagick programs provided with Ubuntu, even 18.04, don't compile / link against any library that handles JPEG2000.  Years ago, it used to use Jasper, but Jasper's not in Debian/Ubuntu trees at all any more.
 
-Imagemagick itself links against libopenjp2. But, the version in Debian/Ubuntu `main` doesn't since libopenjp2 isn't in `main`.
+Imagemagick itself will link against libopenjp2. But, the version in Debian/Ubuntu `main` doesn't since libopenjp2 isn't in `main`.
 
 So, we're building a local repo from source.  Fun.
 
