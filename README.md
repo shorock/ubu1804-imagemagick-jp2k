@@ -1,12 +1,12 @@
 TOTAL HACK JOB - use at your own risk
 
-As it currently stands, the Imagemagick programs provided with Ubuntu, even 18.04, don't compile / link against any library that handles JPEG2000.  Used to do Jasper, years back, but Jasper's in the past.
+As it currently stands, the Imagemagick programs provided with Ubuntu, even 18.04, don't compile / link against any library that handles JPEG2000.  Years ago, it used to use Jasper, years back, but Jasper's well in the past (no longer in the Deb/Ubuntu tree).
 
-Imagemagick itself links against libopenjp2. But, the version in Debian/Ubuntu `main` doesn't.
+Imagemagick itself links against libopenjp2. But, the version in Debian/Ubuntu `main` doesn't since libopenjp2 isn't in `main`.
 
-So, we're building a .deb repo from source.  Fun.
+So, we're building a local repo from source.  Fun.
 
-The Dockerfile does 99% of the build, but leaves the files in the container.  From there, I mounted the output/
+The Dockerfile does 99% of the build, but just leaves the files in the built container.  From there, I mounted the output/
 
 `docker run -it --rm -v $PWD/output:/output imbuilt`
 
@@ -18,7 +18,7 @@ I also just checked in that tarball to this repo for easy retrieval.
 
 ---
 
-My build script for a ubuntu:18.04 derived Docker container containing this .tgz is using:
+My build script for a ubuntu:18.04-based Docker container using this repo (a Dockerized version of [Islandora 7.x](https://islandora.ca) is configured with the following:
 
 ```
 # Customized imagemagick with support for OpenJP2k
