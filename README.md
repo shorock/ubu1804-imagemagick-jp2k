@@ -18,7 +18,7 @@ I also just checked in that tarball to this repo for easy retrieval.
 
 ---
 
-My build script for a ubuntu:18.04-based Docker container using this repo (a Dockerized version of [Islandora 7.x](https://islandora.ca) is configured with the following:
+My build script for a ubuntu:18.04-based Docker container using this repo (a Dockerized version of [Islandora 7.x](https://islandora.ca)) is configured with the following:
 
 ```
 # Customized imagemagick with support for OpenJP2k
